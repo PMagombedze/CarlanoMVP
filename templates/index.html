@@ -1,73 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Carlano MVP{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/full.min.css') }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlano MVP</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.20/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-</head>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Nunito&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
-<style>
-    /* CSS Styling for the footer */
-    footer {
-        background-color: #ffffff;
-        padding: 10px;
-        text-align: center;
-    }
+  </head>
 
-    footer a {
-        color: #000000;
-        text-decoration: none;
-        padding: 0 10px;
-    }
-
-    footer a:not(:last-child)::after {
-        content: "|";
-        margin-left: 10px;
-        margin-right: 10px;
-        color: #999;
-    }
-</style>
-
-
-<body style="font-family: 'Open Sans', sans-serif;">
-
-    <!--------navbar------->
+  <body style="font-family: 'Comfortaa', sans-serif;">
+    
+    </style>
     <div class="navbar bg-base-100">
-        <a class="btn btn-ghost text-xl">CARLANO</a>
-    </div>
-    <hr>
-
-    <!------hero section---->
-    <div class="hero min-h-screen bg-base-200">
-        <div class="hero-content flex-col lg:flex-row">
-            <img src="https://cdn.pixabay.com/photo/2017/08/22/10/47/washing-machine-2668472_1280.jpg"
-                class="max-w-sm rounded-lg shadow-2xl" />
-            <div>
-                <h1 class="text-5xl font-bold">Who we are!</h1>
-                <p class="py-6">Discover the epitome of convenience with our premium laundry services. At Carlano Laundry
-                    Services, we handle your laundry needs with utmost care and professionalism.Let us take care of the
-                    chore while you focus on what truly matters. Try our exceptional laundry services today!</p>
-                    <form>
-                        <input type="text" placeholder="Services provided" style="border: 1px rgb(27,27,27) solid;padding: 10px;border-radius: 7px;outline: none;">
-                        <button type="submit" class="btn btn-primary" style="border: 1px rgb(27,27,27) solid;background-color: rgb(27,27,27);color: #ffffff;">Search</button>
-                    </form>
-                </div>
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Services</a></li>
+            <li>
+              <a>Locations</a>
+              <ul class="p-2">
+                <li><a>Harare</a></li>
+                <li><a>Mutare</a></li>
+                <li><a>Gweru</a></li>
+                <li><a>Masvingo</a></li>
+                <li><a>Marondera</a></li>
+                <li><a>Bulawayo</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
+        <a class="btn btn-ghost text-xl">Carlano</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a>Services</a></li>
+          <li>
+            <details>
+              <summary>Locations</summary>
+              <ul class="p-2">
+                <li><a>Harare</a></li>
+                <li><a>Mutare</a></li>
+                <li><a>Gweru</a></li>
+                <li><a>Masvingo</a></li>
+                <li><a>Marondera</a></li>
+                <li><a>Bulawayo</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a class="btn btn-neutral">SignIn</a>
+      </div>
+    </div>
+    
+    
+    
+    <!--------------hero---->
+    <div class="hero min-h-screen bg-base-200" style="background-color: #fff;">
+      <div class="hero-content flex-col lg:flex-row-reverse">
+        <img src="https://cdn.pixabay.com/photo/2017/08/22/10/47/washing-machine-2668472_1280.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+        <div>
+          <h1 class="text-5xl font-bold">Effortless Clean: Carlano Laundry Service</h1>
+          <p class="py-6">Discove the epitome of convenience with our premium laundry services. At Carlano Laundry Services, we handle your laundry needs with utmost care and proffesionalism. let us take care of the chore while you focus on what truly matters. Try our exceptional laundry services today!</p>
+          <button class="btn btn-primary">Get Started</button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="hero min-h-56 bg-base-200">
+      <div class="hero-content flex-col lg:flex-row">
+        <img src="https://cdn.pixabay.com/photo/2016/10/16/08/25/laundromat-1744612_1280.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+        <div>
+          <h1 class="text-5xl font-bold">About</h1>
+          <p>As a university student, I decided to build a laundry service website after seeing the need for dry cleaning services at my college. Most students dislike the concept of doing laundry so I then came up with an idea of doing that job for them but of course they will be paying. To make my services available not to my college only but to other colleges, I built this website so that I can provide this service for all the universities in the places listed in the <strong>locations</strong> dropdown. Payments are done using EcoCash ZWL</bold></p>
+          <br>
+          <strong><p>Below are my social media links:</p></strong><br>
+          <p><a href="https://twitter.com/P_Magombedze" style="text-decoration: underline;">Twitter</a></p><br>
+          <p><a href="https://github.com/PMagombedze/" style="text-decoration: underline;">Github</a></p><br>
+          <p><a href="https://www.linkedin.com/in/percy-magombedze-ab0979268/" style="text-decoration: underline;">LinkedIn</a></p><br>
+          <p><a href="https://github.com/PMagombedze/CarlanoMVP" style="text-decoration: underline;">Project repo</a></p><br>
+          </div>
+      </div>
     </div>
 
-    <!----footer---->
-    <footer>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </footer>
-    <script src="{{ url_for('static',filename='js/tailwind.js') }}"></script>
-</body>
 
+
+
+    <div class="hero min-h-24 bg-base-200" >
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold" style="margin-bottom: 30px;margin-top: 70px;">Ready for delivery</h1>
+          <button class="btn btn-outline btn-primary" style="margin-bottom: 70px;">Schedule a pickup</button>
+        </div>
+      </div>
+    </div>
+
+
+    <h1 class="text-5xl font-bold" style="padding-left: 150px;margin-top: 70px;margin-bottom: 40px;">Why you'll love Carlano:</h1>
+
+    <div class="flex w-full" style="padding-left: 70px;padding-right: 70px;margin-bottom: 70px;">
+      <div class="grid h-80 flex-grow card bg-base-300 rounded-box place-items-center" style="background-color: rgb(28, 26, 26);">
+        <p class="text-5xl" style="background: linear-gradient(to right, #33ccff, #99ccff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;">
+          Sustainable dry cleaning.</p></div>
+      <div class="divider divider-horizontal">ALSO</div>
+      <div class="grid h-80 flex-grow card bg-base-300 rounded-box place-items-center" style="background-color: rgb(28, 26, 26);">
+        <p class="text-5xl" style="background: linear-gradient(to right, #33ccff, #99ccff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;">Satisfaction guaranteed.</p></div>
+    </div>
+    
+    
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
+ 
+      <aside>
+        <p>Copyright © 2023 - All right reserved by Carlano Inc</p>
+      </aside>
+    </footer>
+    
+
+  </body>
 </html>
